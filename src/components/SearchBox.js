@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from "react-redux";
 import { bindActionCreators } from 'redux';
-import throttle from 'lodash/throttle';
 import _ from 'underscore';
 import "./SearchBox.css"
 import {
@@ -24,10 +23,6 @@ componentDidUpdate(prevProps){
     this.setState({searchSuggestions: this.props.searchSuggestions, showSuggestions: true});
   }
 }
-
-throttleFunction = throttle(function() {
-  this.props.actions.getSuggestions(this.state.query);
-}, 3000) 
 
 debounce = _.debounce(function() {
   this.props.actions.getSuggestions(this.state.query);
