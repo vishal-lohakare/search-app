@@ -1,0 +1,12 @@
+.searchContainer {
+  width: 80%
+}
+
+.searchContainer .sortSelect {
+  width: 40%;
+  padding: 8px 10px;
+  height: 40px;
+  margin: 10px 0;
+  margin-left: 100px;
+
+}
